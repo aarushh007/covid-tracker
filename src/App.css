@@ -2,37 +2,66 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+select {
+  font-size: 1.3rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+select {
+  background-color: skyblue;
+  border: none;
+  padding: 5px 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  outline: solid black 1px;
+}
+select:focus {
+  outline: solid black 3px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+
+#info {
+  max-width: 800px;
+  margin: auto;
+  min-width: 200px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 10px;
   color: white;
+  padding: 10px;
 }
-
-.App-link {
-  color: #61dafb;
+#cases {
+  background-color: darkblue;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+#deaths {
+  background-color: maroon;
+}
+#recovered {
+  background-color: green;
+}
+@media (max-width: 580px){
+  #info {
+    grid-template-columns: 1fr 1fr;
   }
-  to {
-    transform: rotate(360deg);
+  #cases {
+    grid-column: 1 / -1;
+  }
+  h2 {
+    font-size: 1.1rem;
+  }
+  select {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 310px){
+  #info {
+    grid-template-columns: 1fr;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 0.9rem;
+  }
+  select {
+    font-size: 0.97rem;
   }
 }
